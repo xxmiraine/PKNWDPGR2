@@ -1,0 +1,76 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    Console.WriteLine ("Welcome to the RPS Game, strangers!");
+
+    Console.WriteLine ("What's your name, Player one?");
+    string PlayerOne = Console.ReadLine();
+
+    Console.WriteLine ("Hi there," + PlayerOne);
+
+    Console.WriteLine ("And yours, Player two?");
+    string PlayerTwo = Console.ReadLine();
+
+    Console.WriteLine ("Nice to meet ya, " + PlayerTwo);
+
+    Console.WriteLine ("So get yourself ready, " + PlayerOne + " and " + PlayerTwo + "!");
+
+    Console.WriteLine ("It's time to choose your weapon, " + PlayerOne);
+    Console.WriteLine ("Hey, " + PlayerTwo + " Don't look! We don't approve cheating here, right?");
+
+    Console.WriteLine ("So, " + PlayerOne + " Choose your weapon, R, P or S?");
+    string ChoiceOne = Console.ReadLine();
+    Console.Clear();
+
+    Console.WriteLine ("Excellent choice, " + PlayerOne); 
+
+    Console.WriteLine ("Now's your turn, " + PlayerTwo);
+    string ChoiceTwo = Console.ReadLine();
+    if (ChoiceOne == "R" && ChoiceTwo == "S"){
+      Console.WriteLine ("Congrats, " + PlayerOne + " wins! Good luck next");
+    }
+    else {
+      if (ChoiceOne == "R" && ChoiceTwo == "R"){
+      Console.WriteLine ("Whoah, you two share same mind? It's a draw!");
+      }
+      else {
+        if (ChoiceOne == "R" && ChoiceTwo == "P"){
+          Console.WriteLine ("Congrats, " + PlayerTwo + " wins! Good luck next time, " + PlayerOne);
+        }
+        else{
+          if (ChoiceOne == "P" && ChoiceTwo == "P"){
+            Console.WriteLine ("It's a draw! GG WP hooman fellas");
+          }
+          else{
+            if (ChoiceOne == "P" && ChoiceTwo == "R"){
+              Console.WriteLine ("Congrats, " + PlayerOne + " wins!");
+            }
+            else{
+              if (ChoiceOne == "P" && ChoiceTwo == "S"){
+                Console.WriteLine ("Congrats, " + PlayerTwo + " wins! Try next time, " + PlayerOne);
+              }
+              else{
+                if (ChoiceOne == "S" && ChoiceTwo == "P"){
+                  Console.WriteLine ("Congrats, " + PlayerOne + " wins! Good luck next time, " + PlayerTwo);
+                }
+                else{
+                  if (ChoiceOne == "S" && ChoiceTwo == "R"){
+                    Console.WriteLine ("Congrats, " + PlayerTwo + " wins! Try next time, " + PlayerOne);
+                  }
+                  else{
+                    if (ChoiceOne == "S" && ChoiceTwo == "S"){
+                      Console.WriteLine ("Woo, It's a draw! GG WP, hooman fellas!");
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    
+  }
+}
